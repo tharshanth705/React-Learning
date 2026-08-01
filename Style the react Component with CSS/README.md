@@ -1,16 +1,58 @@
-# React + Vite
+# Styling React Components with CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+There are several ways to style React components without using external CSS frameworks or preprocessors.
 
-Currently, two official plugins are available:
+## 1. External CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Create a separate `.css` file.
+* Import it into the component.
+* Styles are **global** and can affect other components if class names are reused.
 
-## React Compiler
+**Example:**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* `Button.jsx`
+* `Button.css`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 2. CSS Modules
+
+* Create a `.module.css` file.
+* Import it as a module.
+* Styles are **scoped** to the component, preventing class name conflicts.
+* Recommended for medium and large React applications.
+
+**Example:**
+
+* `Button.jsx`
+* `Button.module.css`
+
+---
+
+## 3. Inline Styles
+
+* Define styles as JavaScript objects.
+* Apply them using the `style` prop.
+* Best for simple or dynamic styles.
+* Does **not** support CSS pseudo-classes like `:hover` or `:focus` directly.
+
+**Example:**
+
+```jsx
+const styles = {
+  backgroundColor: "royalblue",
+  color: "white",
+};
+
+<button style={styles}>Click Me</button>
+```
+
+---
+
+### Summary
+
+| Method        | Best For              | Pros                               | Cons                                           |
+| ------------- | --------------------- | ---------------------------------- | ---------------------------------------------- |
+| External CSS  | Small projects        | Simple and familiar                | Global styles may conflict                     |
+| CSS Modules   | Medium/Large projects | Scoped styles, no naming conflicts | More files to manage                           |
+| Inline Styles | Dynamic styling       | Easy to use with JavaScript        | No direct support for `:hover`, `:focus`, etc. |
