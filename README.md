@@ -10,14 +10,16 @@ This repository contains my React learning journey with examples and practice co
 | [Card Component](./Card-Component) | Creating reusable components |
 | [CSS Styling](./Style-the-react-Component-with-CSS) | Styling React components using CSS |
 | [Props](./props) | Passing data between components using props, PropTypes and default values |
+| [Conditional Rendering](./Conditional-Rendering) | Render different UI based on conditions using props, default values and the ternary operator |
 
 ## 🛠 Technologies
 
 - React
-- JavaScript
+- JavaScript (ES6+)
 - JSX
 - CSS
 - Vite
+- PropTypes
 - Git & GitHub
 
 ## 📈 Learning Progress
@@ -26,8 +28,17 @@ This repository contains my React learning journey with examples and practice co
 ✅ Components  
 ✅ Component Styling  
 ✅ Props  
+✅ Conditional Rendering  
 🔄 State Management  
 🔄 Events  
 🔄 Hooks  
 🔄 React Router  
 🔄 API Integration
+
+## 🎯 Goal
+
+My goal is to build a strong foundation in React by learning each concept step by step and creating small projects before moving on to larger, real-world applications.
+
+---
+
+⭐ Feel free to explore the projects and follow along with my React learning journey!
