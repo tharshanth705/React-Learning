@@ -1,16 +1,187 @@
-# React + Vite
+# React `useState()` Hook 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of my **React learning journey**, focused on understanding and practicing the `useState()` Hook.
 
-Currently, two official plugins are available:
+## 📚 What I Learned
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### React Hooks
 
-## React Compiler
+React Hooks are special functions that allow functional components to use React features without writing class components.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Some commonly used React Hooks include:
 
-## Expanding the ESLint configuration
+* `useState()`
+* `useEffect()`
+* `useContext()`
+* `useReducer()`
+* `useCallback()`
+* And more...
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### `useState()`
+
+`useState()` is a React Hook that allows a functional component to create and manage **state**.
+
+The basic syntax is:
+
+```jsx
+const [state, setState] = useState(initialValue);
+```
+
+For example:
+
+```jsx
+const [name, setName] = useState("Guest");
+```
+
+Here:
+
+* `name` → Current state value
+* `setName` → Function used to update the state
+* `"Guest"` → Initial state value
+
+When the setter function is called, React updates the state and re-renders the component.
+
+---
+
+## 🧪 Practice Component
+
+### `MyComponent.jsx`
+
+I used `MyComponent` mainly for **practicing and understanding `useState()`**.
+
+It demonstrates managing multiple independent state variables:
+
+```jsx
+const [name, setName] = useState("Guest");
+const [age, setAge] = useState(0);
+const [isEmployed, setIsEmployed] = useState(false);
+```
+
+### Concepts Practiced
+
+* Creating state variables
+* Updating string state
+* Updating numeric state
+* Updating boolean state
+* Using setter functions
+* Conditional rendering
+* Toggling boolean state
+
+Example:
+
+```jsx
+<p>Is employed : {isEmployed ? "yes" : "No"}</p>
+```
+
+---
+
+## 🧮 Mini Project — Counter
+
+### `Counter.jsx`
+
+The `Counter` component is a small project created to **apply `useState()` in a practical way**.
+
+It contains:
+
+* ➕ Increment button
+* 🔄 Reset button
+* ➖ Decrement button
+* A counter display
+
+The counter state is initialized with:
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+The state is then updated using:
+
+```jsx
+setCount(count + 1);
+```
+
+```jsx
+setCount(count - 1);
+```
+
+```jsx
+setCount(0);
+```
+
+This helped me understand how state changes cause a React component to re-render and display the updated value.
+
+---
+
+## 🗂️ Project Structure
+
+```text
+useState-hook/
+│
+├── src/
+│   ├── App.jsx
+│   ├── Counter.jsx
+│   ├── MyComponent.jsx
+│   ├── App.css
+│   └── ...
+│
+├── public/
+├── package.json
+└── README.md
+```
+
+---
+
+## 🎯 Main Learning Goals
+
+Through this project, I practiced:
+
+* Understanding React Hooks
+* Understanding `useState()`
+* Creating state variables
+* Updating state with setter functions
+* Handling button click events
+* Conditional rendering
+* Boolean state toggling
+* Building a small interactive React component
+
+---
+
+## 🛠️ Technologies Used
+
+* **React**
+* **JavaScript (JSX)**
+* **CSS**
+* **Vite**
+* **npm**
+
+---
+
+## 🚀 Running the Project
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Then open the local development URL provided by Vite.
+
+---
+
+## 📌 Note
+
+`MyComponent` was created primarily as a **practice component** to experiment with different types of state.
+
+`Counter` was created as a **small practical project** to apply the concepts learned from `useState()`.
+
+---
+
+## 📖 Part of My React Learning Journey
+
+This project is one step in my ongoing journey of learning React, with each project focusing on a specific React concept.
