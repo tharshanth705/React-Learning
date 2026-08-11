@@ -6,15 +6,16 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 
 ## 📚 React Concepts Covered
 
-| Topic                                                | Description                                                                               |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [My First React Learning](./My-First-React_Learning) | Basic React setup, components and JSX                                                     |
-| [Card Component](./Card-Component)                   | Creating reusable React components                                                        |
-| [CSS Styling](./Style-the-react-Component-with-CSS)  | Styling React components using CSS                                                        |
-| [Props](./props)                                     | Passing data between components, destructuring props, PropTypes and default values        |
-| [Conditional Rendering](./Conditional-Rendering)     | Rendering UI conditionally using logical operators and ternary operators                  |
-| [List Component](./List-Component)                   | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props |
-| [Click Event](./Click-Event)                         | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick`  |
+| Topic                                                | Description                                                                                     |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [My First React Learning](./My-First-React_Learning) | Basic React setup, components and JSX                                                           |
+| [Card Component](./Card-Component)                   | Creating reusable React components                                                              |
+| [CSS Styling](./Style-the-react-Component-with-CSS)  | Styling React components using CSS                                                              |
+| [Props](./props)                                     | Passing data between components, destructuring props, PropTypes and default values              |
+| [Conditional Rendering](./Conditional-Rendering)     | Rendering UI conditionally using logical operators and ternary operators                        |
+| [List Component](./List-Component)                   | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props       |
+| [Click Event](./Click-Event)                         | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick`        |
+| [useState Hook](./useState-hook)                     | Managing component state using `useState()`, updating state and building an interactive Counter |
 
 ## 🛠 Technologies
 
@@ -64,6 +65,19 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Using `e.target`
 * Modifying an element based on an event
 
+### State Management
+
+* Understanding React state
+* Using the `useState()` Hook
+* Creating state variables
+* Updating state using setter functions
+* Managing multiple state variables
+* Updating string, number and boolean states
+* Toggling boolean state
+* Using state with event handlers
+* Understanding component re-rendering
+* Building a simple Counter application
+
 ## 📈 Learning Progress
 
 ✅ JSX Basics
@@ -73,8 +87,10 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 ✅ Conditional Rendering
 ✅ List Rendering
 ✅ Events
-🔄 State Management
-🔄 Hooks
+✅ `useState()` Hook
+🔄 `useEffect()` Hook
+🔄 `useContext()` Hook
+🔄 `useReducer()` Hook
 🔄 React Router
 🔄 API Integration
 
