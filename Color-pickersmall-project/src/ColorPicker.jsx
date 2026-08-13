@@ -14,7 +14,7 @@ function ColorPicker() {
         <div className="color-picker-container">
             <h1>Color Picker</h1>
             <div className="color-display" style={{ backgroundColor: color }}>
-                <p>Selected color : {color}</p>
+                <p>Selected color : {color.toLocaleUpperCase()}</p>
             </div>
             <label> Select a color </label>
             <input type="color" value={color} onChange={handleColorChange} />
