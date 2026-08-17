@@ -6,18 +6,19 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 
 ## 📚 React Concepts Covered
 
-| Topic                                                | Description                                                                                     |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [My First React Learning](./My-First-React_Learning) | Basic React setup, components and JSX                                                           |
-| [Card Component](./Card-Component)                   | Creating reusable React components                                                              |
-| [CSS Styling](./Style-the-react-Component-with-CSS)  | Styling React components using CSS                                                              |
-| [Props](./props)                                     | Passing data between components, destructuring props, PropTypes and default values              |
-| [Conditional Rendering](./Conditional-Rendering)     | Rendering UI conditionally using logical operators and ternary operators                        |
-| [List Component](./List-Component)                   | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props       |
-| [Click Event](./Click-Event)                         | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick`        |
-| [useState Hook](./useState-hook)                     | Managing component state using `useState()`, updating state and building an interactive Counter |
-| [onChange Event](./onChange-Event)                   | Handling form inputs using `onChange`, controlled components and multiple form elements         |
-| [Updater Function](./Updater-Function)               | Using state updater functions to safely update state based on the previous state                |
+| Topic                                                | Description                                                                                              |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [My First React Learning](./My-First-React_Learning) | Basic React setup, components and JSX                                                                    |
+| [Card Component](./Card-Component)                   | Creating reusable React components                                                                       |
+| [CSS Styling](./Style-the-react-Component-with-CSS)  | Styling React components using CSS                                                                       |
+| [Props](./props)                                     | Passing data between components, destructuring props, PropTypes and default values                       |
+| [Conditional Rendering](./Conditional-Rendering)     | Rendering UI conditionally using logical operators and ternary operators                                 |
+| [List Component](./List-Component)                   | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props                |
+| [Click Event](./Click-Event)                         | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick`                 |
+| [useState Hook](./useState-hook)                     | Managing component state using `useState()`, updating state and building an interactive Counter          |
+| [onChange Event](./onChange-Event)                   | Handling form inputs using `onChange`, controlled components and multiple form elements                  |
+| [Updater Function](./Updater-Function)               | Using state updater functions to safely update state based on the previous state                         |
+| [Object State](./useState-object)                    | Managing multiple related values inside a single state object using `useState()` and the spread operator |
 
 ## 🛠 Technologies
 
@@ -80,6 +81,33 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Using state with event handlers
 * Understanding component re-rendering
 * Building a simple Counter application
+* Managing multiple related values inside a single state object
+* Accessing individual properties from an object stored in state
+* Updating individual object properties without replacing the entire state object
+* Using the spread operator to preserve existing object properties
+* Using object state with form inputs
+* Dynamically updating object state based on `event.target.value`
+
+Example:
+
+```jsx
+const [car, setCar] = useState({
+    year: 2024,
+    make: "Ford",
+    model: "mustang"
+});
+```
+
+Updating one property while preserving the rest of the object:
+
+```jsx
+setCar(c => ({
+    ...c,
+    year: event.target.value
+}));
+```
+
+The spread operator copies the existing state before changing the selected property.
 
 ### State Updater Functions
 
@@ -120,6 +148,8 @@ In this example, the count increases by `3`.
 * Using `checked` with radio buttons
 * Accessing input values using `event.target.value`
 * Updating form state with `useState()`
+* Managing multiple form-related values inside an object state
+* Updating individual object properties from input events
 
 ## 📂 Projects
 
@@ -136,6 +166,7 @@ Some examples include:
 * 🔢 Counter using `useState()`
 * 📝 Form Handling using `onChange`
 * 🔄 Counter using State Updater Functions
+* 🚗 Car State Management using an Object with `useState()`
 
 Each project focuses on a specific React concept and is kept separate so the concepts can be easily understood and practiced.
 
@@ -155,6 +186,7 @@ Each project focuses on a specific React concept and is kept separate so the con
 * ✅ Controlled Components
 * ✅ Basic Form Handling
 * ✅ State Updater Functions
+* ✅ Object State Management
 
 ### Currently Learning / Upcoming
 
