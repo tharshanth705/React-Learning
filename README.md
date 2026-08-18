@@ -19,6 +19,7 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 | [onChange Event](./onChange-Event)                   | Handling form inputs using `onChange`, controlled components and multiple form elements                  |
 | [Updater Function](./Updater-Function)               | Using state updater functions to safely update state based on the previous state                         |
 | [Object State](./useState-object)                    | Managing multiple related values inside a single state object using `useState()` and the spread operator |
+| [Array State](./useState-array)                      | Managing array state, adding items with the spread operator and removing items with `filter()`           |
 
 ## 🛠 Technologies
 
@@ -52,6 +53,7 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Creating dynamic JSX elements
 * Using unique keys for list items
 * Passing arrays through props
+* Rendering lists from state
 
 ### Conditional Rendering
 
@@ -87,6 +89,9 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Using the spread operator to preserve existing object properties
 * Using object state with form inputs
 * Dynamically updating object state based on `event.target.value`
+* Managing arrays using `useState()`
+* Adding items to array state using the spread operator
+* Removing items from array state using `filter()`
 
 Example:
 
@@ -108,6 +113,34 @@ setCar(c => ({
 ```
 
 The spread operator copies the existing state before changing the selected property.
+
+### Array State
+
+* Creating an array using `useState()`
+* Displaying array items using `map()`
+* Adding new items to an array state
+* Using the spread operator to preserve existing array items
+* Removing items using `filter()`
+* Using array indexes when handling item events
+* Updating the UI when array state changes
+
+Example:
+
+```jsx
+const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
+```
+
+Adding a new item:
+
+```jsx
+setFoods(f => [...f, newFood]);
+```
+
+Removing an item:
+
+```jsx
+setFoods(foods.filter((_, i) => i !== index));
+```
 
 ### State Updater Functions
 
@@ -167,6 +200,7 @@ Some examples include:
 * 📝 Form Handling using `onChange`
 * 🔄 Counter using State Updater Functions
 * 🚗 Car State Management using an Object with `useState()`
+* 🍎 Food List using Array State
 
 Each project focuses on a specific React concept and is kept separate so the concepts can be easily understood and practiced.
 
@@ -187,6 +221,7 @@ Each project focuses on a specific React concept and is kept separate so the con
 * ✅ Basic Form Handling
 * ✅ State Updater Functions
 * ✅ Object State Management
+* ✅ Array State Management
 
 ### Currently Learning / Upcoming
 
