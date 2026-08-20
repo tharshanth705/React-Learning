@@ -6,20 +6,21 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 
 ## 📚 React Concepts Covered
 
-| Topic                                                | Description                                                                                              |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [My First React Learning](./My-First-React_Learning) | Basic React setup, components and JSX                                                                    |
-| [Card Component](./Card-Component)                   | Creating reusable React components                                                                       |
-| [CSS Styling](./Style-the-react-Component-with-CSS)  | Styling React components using CSS                                                                       |
-| [Props](./props)                                     | Passing data between components, destructuring props, PropTypes and default values                       |
-| [Conditional Rendering](./Conditional-Rendering)     | Rendering UI conditionally using logical operators and ternary operators                                 |
-| [List Component](./List-Component)                   | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props                |
-| [Click Event](./Click-Event)                         | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick`                 |
-| [useState Hook](./useState-hook)                     | Managing component state using `useState()`, updating state and building an interactive Counter          |
-| [onChange Event](./onChange-Event)                   | Handling form inputs using `onChange`, controlled components and multiple form elements                  |
-| [Updater Function](./Updater-Function)               | Using state updater functions to safely update state based on the previous state                         |
-| [Object State](./useState-object)                    | Managing multiple related values inside a single state object using `useState()` and the spread operator |
-| [Array State](./useState-array)                      | Managing array state, adding items with the spread operator and removing items with `filter()`           |
+| Topic                                                 | Description                                                                                              |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [My First React Learning](./My-First-React_Learning)  | Basic React setup, components and JSX                                                                    |
+| [Card Component](./Card-Component)                    | Creating reusable React components                                                                       |
+| [CSS Styling](./Style-the-react-Component-with-CSS)   | Styling React components using CSS                                                                       |
+| [Props](./props)                                      | Passing data between components, destructuring props, PropTypes and default values                       |
+| [Conditional Rendering](./Conditional-Rendering)      | Rendering UI conditionally using logical operators and ternary operators                                 |
+| [List Component](./List-Component)                    | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props                |
+| [Click Event](./Click-Event)                          | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick`                 |
+| [useState Hook](./useState-hook)                      | Managing component state using `useState()`, updating state and building an interactive Counter          |
+| [onChange Event](./onChange-Event)                    | Handling form inputs using `onChange`, controlled components and multiple form elements                  |
+| [Updater Function](./Updater-Function)                | Using state updater functions to safely update state based on the previous state                         |
+| [Object State](./useState-object)                     | Managing multiple related values inside a single state object using `useState()` and the spread operator |
+| [Array State](./useState-array)                       | Managing array state, adding items with the spread operator and removing items with `filter()`           |
+| [Array of Objects State](./useState-array-of-objects) | Managing an array of objects, adding and removing objects, and handling multiple input states            |
 
 ## 🛠 Technologies
 
@@ -54,6 +55,7 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Using unique keys for list items
 * Passing arrays through props
 * Rendering lists from state
+* Rendering objects stored inside arrays
 
 ### Conditional Rendering
 
@@ -92,6 +94,11 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Managing arrays using `useState()`
 * Adding items to array state using the spread operator
 * Removing items from array state using `filter()`
+* Managing arrays containing objects
+* Creating objects from multiple input values
+* Adding objects to an array state
+* Removing objects from an array state
+* Resetting input states after adding an object
 
 Example:
 
@@ -142,6 +149,36 @@ Removing an item:
 setFoods(foods.filter((_, i) => i !== index));
 ```
 
+### Array of Objects State
+
+* Creating an array state containing objects
+* Creating objects from multiple input values
+* Adding objects to an array using the spread operator
+* Accessing object properties inside `map()`
+* Removing objects using `filter()`
+* Managing separate states for object properties
+* Resetting multiple input states after adding an object
+
+Example:
+
+```jsx
+const [cars, setCars] = useState([]);
+
+const newCar = {
+    year: carYear,
+    make: carMake,
+    model: carModel
+};
+
+setCars(c => [...c, newCar]);
+```
+
+Removing a car:
+
+```jsx
+setCars(c => c.filter((_, i) => i !== index));
+```
+
 ### State Updater Functions
 
 * Understanding updater functions
@@ -183,6 +220,8 @@ In this example, the count increases by `3`.
 * Updating form state with `useState()`
 * Managing multiple form-related values inside an object state
 * Updating individual object properties from input events
+* Managing multiple input states
+* Resetting form inputs after submitting data
 
 ## 📂 Projects
 
@@ -201,6 +240,7 @@ Some examples include:
 * 🔄 Counter using State Updater Functions
 * 🚗 Car State Management using an Object with `useState()`
 * 🍎 Food List using Array State
+* 🚘 Car List using an Array of Objects
 
 Each project focuses on a specific React concept and is kept separate so the concepts can be easily understood and practiced.
 
@@ -222,6 +262,7 @@ Each project focuses on a specific React concept and is kept separate so the con
 * ✅ State Updater Functions
 * ✅ Object State Management
 * ✅ Array State Management
+* ✅ Array of Objects State Management
 
 ### Currently Learning / Upcoming
 
