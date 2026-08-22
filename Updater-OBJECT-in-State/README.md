@@ -25,6 +25,8 @@ The displayed car information updates automatically whenever an input value chan
 ```text
 src/
 ├── App.jsx
+├── main.jsx
+├── index.css
 └── MyComponent.jsx
 ```
 

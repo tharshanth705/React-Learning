@@ -26,6 +26,7 @@ Each car is stored as an object inside an array.
 ```text
 src/
 ├── App.jsx
+├── main.jsx
 └── MyComponent.jsx
 ```
 

@@ -25,6 +25,8 @@ The food list is stored inside React state, so the UI automatically updates when
 ```text
 src/
 ├── App.jsx
+├── main.jsx
+├── index.css
 └── MyComponent.jsx
 ```
 

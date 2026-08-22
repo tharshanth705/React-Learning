@@ -30,7 +30,8 @@ The tasks are stored in a React state array and the UI updates automatically whe
 src/
 ├── App.jsx
 ├── ToDoList.jsx
-└── ToDoList.css
+├── main.jsx
+└── index.css
 
 ScreenShot.jpg
 ```

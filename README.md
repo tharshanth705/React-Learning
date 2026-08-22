@@ -6,22 +6,23 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 
 ## 📚 React Concepts Covered
 
-| Topic                                                 | Description                                                                                              |
+| Topic | Description |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [My First React Learning](./My-First-React_Learning)  | Basic React setup, components and JSX                                                                    |
-| [Card Component](./Card-Component)                    | Creating reusable React components                                                                       |
-| [CSS Styling](./Style-the-react-Component-with-CSS)   | Styling React components using CSS                                                                       |
-| [Props](./props)                                      | Passing data between components, destructuring props, PropTypes and default values                       |
-| [Conditional Rendering](./Conditional-Rendering)      | Rendering UI conditionally using logical operators and ternary operators                                 |
-| [List Component](./List-Component)                    | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props                |
-| [Click Event](./Click-Event)                          | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick`                 |
-| [useState Hook](./useState-hook)                      | Managing component state using `useState()`, updating state and building an interactive Counter          |
-| [onChange Event](./onChange-Event)                    | Handling form inputs using `onChange`, controlled components and multiple form elements                  |
-| [Updater Function](./Updater-Function)                | Using state updater functions to safely update state based on the previous state                         |
-| [Object State](./useState-object)                     | Managing multiple related values inside a single state object using `useState()` and the spread operator |
-| [Array State](./useState-array)                       | Managing array state, adding items with the spread operator and removing items with `filter()`           |
-| [Array of Objects State](./useState-array-of-objects) | Managing an array of objects, adding and removing objects, and handling multiple input states            |
-| [To-Do List](./To-Do-List)                            | Building a functional To-Do List with adding, deleting and reordering tasks                              |
+| [My First React Learning](./My-First-React_Learning) | Basic React setup, components and JSX |
+| [Card Component](./Card-Component) | Creating reusable React components |
+| [CSS Styling](./Style-the-react-Component-with-CSS) | Styling React components using CSS |
+| [Props](./props) | Passing data between components, destructuring props, PropTypes and default values |
+| [Conditional Rendering](./Conditional-Rendering) | Rendering UI conditionally using logical operators and ternary operators |
+| [List Component](./List-Component) | Rendering dynamic lists using `map()`, keys, reusable components and arrays through props |
+| [Click Event](./Click-Event) | Handling click events, callback functions, event objects, `e.target` and `onDoubleClick` |
+| [useState Hook](./useState-hook) | Managing component state using `useState()`, updating state and building an interactive Counter |
+| [onChange Event](./onChange-Event) | Handling form inputs using `onChange`, controlled components and multiple form elements |
+| [Updater Function](./Updater-Function) | Using state updater functions to safely update state based on the previous state |
+| [Object State](./useState-object) | Managing multiple related values inside a single state object using `useState()` and the spread operator |
+| [Array State](./useState-array) | Managing array state, adding items with the spread operator and removing items with `filter()` |
+| [Array of Objects State](./useState-array-of-objects) | Managing an array of objects, adding and removing objects, and handling multiple input states |
+| [To-Do List](./To-Do-List) | Building a functional To-Do List with adding, deleting and reordering tasks |
+| [Color Picker](./Color-Picker) | Creating an interactive color picker using `useState()`, controlled inputs and dynamic inline styling |
 
 ## 🛠 Technologies
 
@@ -103,6 +104,8 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Reordering items inside an array state
 * Swapping array elements
 * Updating array state after adding, deleting or moving items
+* Managing color values using state
+* Updating UI styles dynamically based on state
 
 Example:
 
@@ -112,73 +115,58 @@ const [car, setCar] = useState({
     make: "Ford",
     model: "mustang"
 });
-```
 
 Updating one property while preserving the rest of the object:
 
-```jsx
 setCar(c => ({
     ...c,
     year: event.target.value
 }));
-```
 
 The spread operator copies the existing state before changing the selected property.
 
-### Array State
-
-* Creating an array using `useState()`
-* Displaying array items using `map()`
-* Adding new items to an array state
-* Using the spread operator to preserve existing array items
-* Removing items using `filter()`
-* Using array indexes when handling item events
-* Updating the UI when array state changes
-* Reordering items in an array
-* Swapping array elements using destructuring
+Array State
+Creating an array using useState()
+Displaying array items using map()
+Adding new items to an array state
+Using the spread operator to preserve existing array items
+Removing items using filter()
+Using array indexes when handling item events
+Updating the UI when array state changes
+Reordering items in an array
+Swapping array elements using destructuring
 
 Example:
 
-```jsx
 const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
-```
 
 Adding a new item:
 
-```jsx
 setFoods(f => [...f, newFood]);
-```
 
 Removing an item:
 
-```jsx
 setFoods(foods.filter((_, i) => i !== index));
-```
 
 Moving an item:
 
-```jsx
 const updatedTasks = [...tasks];
 
 [updatedTasks[index], updatedTasks[index - 1]] =
     [updatedTasks[index - 1], updatedTasks[index]];
 
 setTasks(updatedTasks);
-```
-
-### Array of Objects State
-
-* Creating an array state containing objects
-* Creating objects from multiple input values
-* Adding objects to an array using the spread operator
-* Accessing object properties inside `map()`
-* Removing objects using `filter()`
-* Managing separate states for object properties
-* Resetting multiple input states after adding an object
+Array of Objects State
+Creating an array state containing objects
+Creating objects from multiple input values
+Adding objects to an array using the spread operator
+Accessing object properties inside map()
+Removing objects using filter()
+Managing separate states for object properties
+Resetting multiple input states after adding an object
 
 Example:
 
-```jsx
 const [cars, setCars] = useState([]);
 
 const newCar = {
@@ -188,158 +176,173 @@ const newCar = {
 };
 
 setCars(c => [...c, newCar]);
-```
 
 Removing a car:
 
-```jsx
 setCars(c => c.filter((_, i) => i !== index));
-```
-
-### To-Do List
-
-* Creating a functional To-Do List
-* Adding tasks to an array state
-* Deleting tasks using `filter()`
-* Moving tasks up and down
-* Swapping array elements
-* Using controlled inputs
-* Preventing empty tasks using `trim()`
-* Using buttons to perform different actions on individual list items
-* Managing multiple operations on array state
+To-Do List
+Creating a functional To-Do List
+Adding tasks to an array state
+Deleting tasks using filter()
+Moving tasks up and down
+Swapping array elements
+Using controlled inputs
+Preventing empty tasks using trim()
+Using buttons to perform different actions on individual list items
+Managing multiple operations on array state
 
 Example:
 
-```jsx
 function addTask() {
     if (newtask.trim() !== "") {
         setTasks(t => [...t, newtask]);
         setNewTask("");
     }
 }
-```
 
 Moving a task:
 
-```jsx
 const updatedTasks = [...tasks];
 
 [updatedTasks[index], updatedTasks[index - 1]] =
     [updatedTasks[index - 1], updatedTasks[index]];
 
 setTasks(updatedTasks);
-```
-
-### State Updater Functions
-
-* Understanding updater functions
-* Using functions with state setter functions
-* Updating state based on the previous state
-* Understanding why multiple direct state updates may not produce the expected result
-* Using multiple updater functions in a single event
-* Understanding queued/batched state updates
-* Using updater functions as a safe approach when the next state depends on the previous state
+Color Picker
+Creating an interactive Color Picker
+Using useState() to store a selected color
+Using <input type="color">
+Handling color changes with onChange
+Using controlled components
+Accessing the selected color using event.target.value
+Updating the background color dynamically
+Using React inline styles
+Using state values inside JSX
+Converting the selected color to uppercase using toLocaleUpperCase()
 
 Example:
 
-```jsx
+const [color, setColor] = useState('#FFFFFF');
+
+Handling the color change:
+
+function handleColorChange(event) {
+    setColor(event.target.value);
+}
+
+Using the color state for dynamic styling:
+
+<div
+    className="color-display"
+    style={{ backgroundColor: color }}
+>
+
+Displaying the selected color:
+
+<p>Selected color : {color.toLocaleUpperCase()}</p>
+
+The color picker demonstrates how React state can be used to dynamically change the appearance of the UI.
+
+State Updater Functions
+Understanding updater functions
+Using functions with state setter functions
+Updating state based on the previous state
+Understanding why multiple direct state updates may not produce the expected result
+Using multiple updater functions in a single event
+Understanding queued/batched state updates
+Using updater functions as a safe approach when the next state depends on the previous state
+
+Example:
+
 setCount(c => c + 1);
-```
 
 Multiple updater functions can be used together:
 
-```jsx
 setCount(c => c + 1);
 setCount(c => c + 1);
 setCount(c => c + 1);
-```
 
-In this example, the count increases by `3`.
+In this example, the count increases by 3.
 
-### Form Handling
-
-* Using the `onChange` event
-* Handling text inputs
-* Handling number inputs
-* Handling `<textarea>`
-* Handling `<select>` dropdowns
-* Handling radio buttons
-* Using controlled components
-* Using `value` to control form elements
-* Using `checked` with radio buttons
-* Accessing input values using `event.target.value`
-* Updating form state with `useState()`
-* Managing multiple form-related values inside an object state
-* Updating individual object properties from input events
-* Managing multiple input states
-* Resetting form inputs after submitting data
-* Using `trim()` to validate text input before adding data
-
-## 📂 Projects
+Form Handling
+Using the onChange event
+Handling text inputs
+Handling number inputs
+Handling <textarea>
+Handling <select> dropdowns
+Handling radio buttons
+Using controlled components
+Using value to control form elements
+Using checked with radio buttons
+Accessing input values using event.target.value
+Updating form state with useState()
+Managing multiple form-related values inside an object state
+Updating individual object properties from input events
+Managing multiple input states
+Resetting form inputs after submitting data
+Using trim() to validate text input before adding data
+Using <input type="color"> as a controlled component
+📂 Projects
 
 The repository contains small projects and examples created while learning individual React concepts.
 
 Some examples include:
 
-* 🃏 Reusable Card Component
-* 🎨 React Component Styling
-* 🧩 Props Practice
-* 🔀 Conditional Rendering
-* 📋 Dynamic List Rendering
-* 🖱️ Click Event Handling
-* 🔢 Counter using `useState()`
-* 📝 Form Handling using `onChange`
-* 🔄 Counter using State Updater Functions
-* 🚗 Car State Management using an Object with `useState()`
-* 🍎 Food List using Array State
-* 🚘 Car List using an Array of Objects
-* 📝 To-Do List with Add, Delete and Reorder Functionality
+🃏 Reusable Card Component
+🎨 React Component Styling
+🧩 Props Practice
+🔀 Conditional Rendering
+📋 Dynamic List Rendering
+🖱️ Click Event Handling
+🔢 Counter using useState()
+📝 Form Handling using onChange
+🔄 Counter using State Updater Functions
+🚗 Car State Management using an Object with useState()
+🍎 Food List using Array State
+🚘 Car List using an Array of Objects
+📝 To-Do List with Add, Delete and Reorder Functionality
+🎨 Interactive Color Picker using useState()
 
 Each project focuses on a specific React concept and is kept separate so the concepts can be easily understood and practiced.
 
-## 📈 Learning Progress
+📈 Learning Progress
+Completed
+✅ JSX Basics
+✅ Components
+✅ Component Styling
+✅ Props
+✅ Conditional Rendering
+✅ List Rendering
+✅ Events
+✅ useState() Hook
+✅ onChange Event
+✅ Controlled Components
+✅ Basic Form Handling
+✅ State Updater Functions
+✅ Object State Management
+✅ Array State Management
+✅ Array of Objects State Management
+✅ Array Item Reordering
+✅ To-Do List Practice Project
+✅ Dynamic Inline Styling
+✅ Color Picker Practice Project
+Currently Learning / Upcoming
+🔄 useEffect() Hook
+🔄 useContext() Hook
+🔄 useReducer() Hook
+🔄 React Router
+🔄 Form Validation
+🔄 API Integration
+🔄 Working with Backend APIs
+🔄 React Projects
+🎯 Goal
 
-### Completed
+My goal is to build a strong foundation in React by understanding core concepts, practicing with small projects, and gradually moving toward building real-world applications.
 
-* ✅ JSX Basics
-* ✅ Components
-* ✅ Component Styling
-* ✅ Props
-* ✅ Conditional Rendering
-* ✅ List Rendering
-* ✅ Events
-* ✅ `useState()` Hook
-* ✅ `onChange` Event
-* ✅ Controlled Components
-* ✅ Basic Form Handling
-* ✅ State Updater Functions
-* ✅ Object State Management
-* ✅ Array State Management
-* ✅ Array of Objects State Management
-* ✅ Array Item Reordering
-* ✅ To-Do List Practice Project
+I am learning React through hands-on coding, where each folder represents a concept, experiment, or small project that I have practiced.
 
-### Currently Learning / Upcoming
-
-* 🔄 `useEffect()` Hook
-* 🔄 `useContext()` Hook
-* 🔄 `useReducer()` Hook
-* 🔄 React Router
-* 🔄 Form Validation
-* 🔄 API Integration
-* 🔄 Working with Backend APIs
-* 🔄 React Projects
-
-## 🎯 Goal
-
-My goal is to build a **strong foundation in React** by understanding core concepts, practicing with small projects, and gradually moving toward building real-world applications.
-
-I am learning React through **hands-on coding**, where each folder represents a concept, experiment, or small project that I have practiced.
-
-The long-term goal is to progress from React fundamentals to building complete **full-stack web applications**.
-
----
+The long-term goal is to progress from React fundamentals to building complete full-stack web applications.
 
 ⭐ Feel free to explore the projects and follow along with my React learning journey!
 
-**More concepts and projects will be added as I continue learning.** 🚀
+More concepts and projects will be added as I continue learning. 🚀

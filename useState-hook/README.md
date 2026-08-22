@@ -121,7 +121,7 @@ useState-hook/
 │   ├── App.jsx
 │   ├── Counter.jsx
 │   ├── MyComponent.jsx
-│   ├── App.css
+│   ├── index.css
 │   └── ...
 │
 ├── public/
