@@ -22,7 +22,7 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 | [Array State](./useState-array) | Managing array state, adding items with the spread operator and removing items with `filter()` |
 | [Array of Objects State](./useState-array-of-objects) | Managing an array of objects, adding and removing objects, and handling multiple input states |
 | [To-Do List](./To-Do-List) | Building a functional To-Do List with adding, deleting and reordering tasks |
-| [Color Picker](./Color-Picker) | Creating an interactive color picker using `useState()`, controlled inputs and dynamic inline styling |
+| [Color Picker](./Color-pickersmall-project) | Creating an interactive color picker using `useState()`, controlled inputs and dynamic inline styling |
 
 ## 🛠 Technologies
 
