@@ -21,6 +21,7 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 | [Object State](./useState-object)                     | Managing multiple related values inside a single state object using `useState()` and the spread operator |
 | [Array State](./useState-array)                       | Managing array state, adding items with the spread operator and removing items with `filter()`           |
 | [Array of Objects State](./useState-array-of-objects) | Managing an array of objects, adding and removing objects, and handling multiple input states            |
+| [To-Do List](./To-Do-List)                            | Building a functional To-Do List with adding, deleting and reordering tasks                              |
 
 ## 🛠 Technologies
 
@@ -99,6 +100,9 @@ The goal is to understand React fundamentals through hands-on coding and gradual
 * Adding objects to an array state
 * Removing objects from an array state
 * Resetting input states after adding an object
+* Reordering items inside an array state
+* Swapping array elements
+* Updating array state after adding, deleting or moving items
 
 Example:
 
@@ -130,6 +134,8 @@ The spread operator copies the existing state before changing the selected prope
 * Removing items using `filter()`
 * Using array indexes when handling item events
 * Updating the UI when array state changes
+* Reordering items in an array
+* Swapping array elements using destructuring
 
 Example:
 
@@ -147,6 +153,17 @@ Removing an item:
 
 ```jsx
 setFoods(foods.filter((_, i) => i !== index));
+```
+
+Moving an item:
+
+```jsx
+const updatedTasks = [...tasks];
+
+[updatedTasks[index], updatedTasks[index - 1]] =
+    [updatedTasks[index - 1], updatedTasks[index]];
+
+setTasks(updatedTasks);
 ```
 
 ### Array of Objects State
@@ -177,6 +194,40 @@ Removing a car:
 
 ```jsx
 setCars(c => c.filter((_, i) => i !== index));
+```
+
+### To-Do List
+
+* Creating a functional To-Do List
+* Adding tasks to an array state
+* Deleting tasks using `filter()`
+* Moving tasks up and down
+* Swapping array elements
+* Using controlled inputs
+* Preventing empty tasks using `trim()`
+* Using buttons to perform different actions on individual list items
+* Managing multiple operations on array state
+
+Example:
+
+```jsx
+function addTask() {
+    if (newtask.trim() !== "") {
+        setTasks(t => [...t, newtask]);
+        setNewTask("");
+    }
+}
+```
+
+Moving a task:
+
+```jsx
+const updatedTasks = [...tasks];
+
+[updatedTasks[index], updatedTasks[index - 1]] =
+    [updatedTasks[index - 1], updatedTasks[index]];
+
+setTasks(updatedTasks);
 ```
 
 ### State Updater Functions
@@ -222,6 +273,7 @@ In this example, the count increases by `3`.
 * Updating individual object properties from input events
 * Managing multiple input states
 * Resetting form inputs after submitting data
+* Using `trim()` to validate text input before adding data
 
 ## 📂 Projects
 
@@ -241,6 +293,7 @@ Some examples include:
 * 🚗 Car State Management using an Object with `useState()`
 * 🍎 Food List using Array State
 * 🚘 Car List using an Array of Objects
+* 📝 To-Do List with Add, Delete and Reorder Functionality
 
 Each project focuses on a specific React concept and is kept separate so the concepts can be easily understood and practiced.
 
@@ -263,6 +316,8 @@ Each project focuses on a specific React concept and is kept separate so the con
 * ✅ Object State Management
 * ✅ Array State Management
 * ✅ Array of Objects State Management
+* ✅ Array Item Reordering
+* ✅ To-Do List Practice Project
 
 ### Currently Learning / Upcoming
 
